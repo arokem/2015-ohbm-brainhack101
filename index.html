@@ -42,7 +42,7 @@
 					<h1>Brain Hacking 101</h1>
 					<h3>Practical scientific computing for neuroimaging</h3>
 					<p><a href="http://arokem.org">Ariel Rokem</a>, <a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
-					<p class="fragment"> Follow along at <t>http://goo.gl/hC6ell</t></p>
+					<p class="fragment"> Follow along at <t>http://tinyurl.com/brainhack101</t></p>
 				</section>
 
 				<section>
@@ -54,7 +54,7 @@
 				</section>
 
 				<section>
-					<h2>Neuroimaging in Python</h2>
+					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
 					<p>Why Python?</p>
 					<section>
 					</section>
@@ -74,7 +74,14 @@
 						<p class="fragment"> (Relatively) easy to learn </p>
 					</section>
 				</section>
-
+				<section>	
+					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
+					<p class="fragment">A diverse set of projects:</p>
+					<p class="fragment">File I/O and data-management</p>
+					<p class="fragment">Analysis of MRI data (structural, functional, diffusion, etc.) and other human brain mapping modalities (e.g <a href="http://martinos.org/mne/stable/index.html">MEG</a>)</p>
+					<p class="fragment">Visualization</p>
+					
+				</section>
 
 				<section data-transition="fade">
 					<h2>The goal of this presentation</h2>
@@ -82,6 +89,15 @@
 					   <p class="fragment highlight-blue">Read your data</p>
 					   <p>Analyze it</p>
 					   <p>And visualize it</p>
+				</section>
+
+				<section>
+					<h2>Reading data from file</h2>
+					<pre><code contenteditable>
+import nibabel as nib
+ni = nib.load('fmri.nii.gz')
+data = ni.get_data()
+					</pre></code>
 				</section>
 
 
