@@ -47,14 +47,18 @@
 
 				<section>
 					<h2>The goal of this presentation</h2>
- 					   Give you practical tools to:  
+ 					   Introduce you to a few practical tools to:  
 					   <p class="fragment">Read your data</p>
+					   <p class="fragment">Look at it</p>
 					   <p class="fragment">Analyze it</p>
-					   <p class="fragment">And visualize it</p>
+					   <p class="fragment">Interactively explore it</p>
 				</section>
 
 				<section>
 					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
+				</section>
+				<section>
+				<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
 					<p>Why Python?</p>
 					<section>
 					</section>
@@ -90,6 +94,10 @@
 					   <p>Analyze it</p>
 					   <p>And visualize it</p>
 				</section>
+				<section>
+					<h2>Data is saved in arrays</h2>
+					<img src="images/array.png">
+				</section>
 
 				<section>
 					<h2>Reading data from file</h2>
@@ -100,6 +108,15 @@ data = ni.get_data()
 					</pre></code>
 				</section>
 
+
+				<section>
+					<h2>Reading data from file</h2>
+					<pre><code contenteditable>
+import nibabel as nib
+ni = nib.load('fmri.nii.gz')
+data = ni.get_data()
+					</pre></code>
+				</section>
 
 				<section>
 					<h2>Look at your data!</h2>
