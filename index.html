@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -44,19 +44,32 @@
 					<p><a href="http://arokem.org" target="_blank">Ariel Rokem</a>, <a href="http://escience.washington.edu" target="_blank">University of Washington eScience Institute</a> </p>
 					<p class="fragment"> Follow along at <t>http://tinyurl.com/brainhack101</t></p>
 				</section>
-
 				<section>
-					<h2>The goal of this presentation</h2>
- 					   Introduce you to a few practical tools to:  
-					   <p class="fragment">Read your data</p>
-					   <p class="fragment">Look at it</p>
-					   <p class="fragment">Analyze it</p>
-					   <p class="fragment">Interactively explore it</p>
+					<div>
+				<img src="images/eScience.png" width="800px" style="background:none; border:none; box-shadow:none;">
+					</div>
 				</section>
 
 				<section>
-					<h3>Hands-on presentation tomorrow at 1, 2 and 3 PM </h3>			</section>
+					<img src="images/stark-venn-diagram.png" width="800px"; style="background:none; border:none; box-shadow:none;" >
+				</section>
 
+				<section>
+					<h2>Data (intensive) Science</h2>
+					<img src="images/Data_Science_VD.png" style="background:none; border:none; box-shadow:none;" >
+					<div >
+				</section>
+
+			<section data-transition="fade">
+				<h2>The goal of this presentation</h2>
+				   Give you practical tools to:  
+				   <p>Read your data</p>
+				   <p>Visualize it</p>
+				   <p>And analyze it</p>
+			</section>
+
+				<section>
+					<h2>Hands-on tutorial in this room tomorrow at 1, 2 and 3 PM</h2>			</section>
 
 				<section>
 					<h2><a href="http://nipy.org" target="_blank">Neuroimaging in Python</a></h2>
@@ -82,10 +95,20 @@
 						<p class="fragment"> (Relatively) easy to learn </p>
 					</section>
 				</section>
-
+				
 				<section>
 					<h2>Scientific Python</h2>
 					<p class="fragment"> Numpy : numerical computing </p>
+				</section>
+
+				<section>
+					<h2><a href="http://numpy.org">Numpy</a></h2>
+					<img src="images/array.png" style="background:none; border:none; box-shadow:none;">
+					
+				</section>
+				<section>
+					<h2>Scientific Python</h2>
+					<p> Numpy : numerical computing </p>
 					<p class="fragment"> Scipy : basic scientific tools </p>
 					
 				</section>
@@ -116,10 +139,10 @@
 					<h2><a href="http://matplotlib.org" target="_blank"> Matplotlib </a></h2>
 					
 					<section>
-					<img src="images/mpl1.png">
+					<img src="images/mpl1.png" style="background:none; border:none; box-shadow:none;">
 					</section>					
 					<section>
-					<img src="images/mpl2.png">
+					<img src="images/mpl2.png" style="background:none; border:none; box-shadow:none;">
 					</section>
 				</section>
 
@@ -142,82 +165,127 @@
 					<section>
 						<div style="position: absolute; top: 100px; left:230px;">
 						The Jupyter notebook <br>
-						<img src="images/ipython1.png" width="500px;">
+						<img src="images/ipython1.png" width="500px;" style="background:none; border:none; box-shadow:none;">
 					</section>
 					<section>
-						Share your analysis directly on <a href="https://github.com/arokem/ISBI2015/blob/master/RS-SFM-example.ipynb" target="_blank"> github </a>
+					You can save your data explorations <br> ("computational lab notebook")	
 					</section>
-				</section>
-				
-				<section>	
-					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
-					<p class="fragment">A diverse set of projects:</p>
-					<p class="fragment">File I/O and data-management</p>
-					<p class="fragment">Analysis of MRI data (structural, functional, diffusion, etc.) and other human brain mapping modalities (e.g <a href="http://martinos.org/mne/stable/index.html">MEG</a>)</p>
-					<p class="fragment">Visualization</p>
-					
-				</section>
-
+					<section>
+						share your analysis directly on <a href="https://github.com/arokem/ISBI2015/blob/master/RS-SFM-example.ipynb" target="_blank"> github </a>
+					</section>
+		<section>
+			and create <a href="https://github.com/mwaskom/Waskom_JNeurosci_2014/blob/master/Searchlight_Analysis.ipynb">really reproducible research</a> projects.
+			
+		</section>
+		
+		</section>
+			
 				<section data-transition="fade">
 					<h2>The goal of this presentation</h2>
  					   Give you practical tools to:  
 					   <p class="fragment highlight-blue">Read your data</p>
-					   <p>Analyze it</p>
-					   <p>And visualize it</p>
+					   <p>Visualize it</p>
+					   <p>And analyze it</p>
 				</section>
+				
 				<section>
 					<h2>Data is saved in arrays</h2>
-					<img src="images/array.png">
+					<img src="images/array.png" style="background:none; border:none; box-shadow:none;">
 				</section>
 
 				<section>
-					<h2>Reading data from file</h2>
+					<h2>Reading data from file with <a href="http://nipy.org/nibabel">Nibabel</a></h2>
 					<pre><code contenteditable>
-import nibabel as nib
-ni = nib.load('fmri.nii.gz')
-data = ni.get_data()
+>>> import nibabel as nib
+>>> ni = nib.load('fmri.nii.gz')
+>>> data = ni.get_data()
 					</pre></code>
 				</section>
+
+				<section>
+					<h2>Reading data from file with <a href="http://nipy.org/nibabel">Nibabel</a></h2>
+					<pre><code contenteditable>
+>>> data.shape
+					</pre></code>
+					<pre><code contenteditable>
+(64, 64, 30, 191)
+					</pre></code>
+				</section>
+
 			<section>
-					<h2>Reading data from file</h2>
-					<pre><code contenteditable>
-type(data)
+					<h2>Reading data from file with <a href="http://nipy.org/nibabel">Nibabel</a></h2>
+			<pre><code contenteditable>
+>>> center_voxel_time_series = data[32, 32, 15, :]
 			</pre></code>
-				</section>
-
+			<pre><code contenteditable>
+[ 3881.  3886.  4052.  3995.  3963.  3910.  3908.  3899.  3922.  3854.
+  3903.  3812.  4041.  3896.  4037.  3857.  3981.  3901.  3931.  ...]
+			</pre></code>
+			</section>
+			
+			<section data-transition="fade">
+				<h2>The goal of this presentation</h2>
+				   Give you practical tools to:  
+				   <p>Read your data</p>
+				   <p class="fragment highlight-blue">Visualize it</p>
+				   <p>And analyze it</p>
+			</section>
+			
 
 				<section>
-					<h2>Look at your data!</h2>
+					<h2>Look at your data with Matplotlib</h2>
 					<pre><code contenteditable>
-import nibabel as nib
-ni = nib.load('fmri.nii.gz')
-data = ni.get_data()
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots(1)
-ax.matshow(data[:, :, data.shape[-1]//2])
-ax.show()
+>>> import matplotlib.pyplot as plt
+>>> plt.matshow(data[:, :, 15, 0])
 					</pre></code>
 				</section>
 
 				<section>
-					<h2>Look at indivdiual voxels!</h2>
-					<pre><code contenteditable>
-plt.plot(data[])
-					</code></pre>
+					<h2>Look at your data with Matplotlib</h2>
+					<img src="images/middle_slice.png" style="background:none; border:none; box-shadow:none;">
 				</section>
 
 				<section>
-					<h2>Calculate the tSNR</h2>
+					<h2>Look at indivdiual voxels</h2>
 					<pre><code contenteditable>
-import numpy as np
-np.mean()
-plt.plot(data[35, 35, 100])
+>>> plt.plot(data[32, 32, 15])
 					</code></pre>
 				</section>
+				
+				<section>
+					<h2>Look at individual voxels</h2>
+					<img src="images/time_series.png" style="background:none; border:none; box-shadow:none;">
+				</section>
+						
+				<section data-transition="fade">
+				<h2>The goal of this presentation</h2>
+					Give you practical tools to:  
+				<p>Read your data</p>
+				<p>Visualize it</p>
+				<p class="fragment highlight-blue">And analyze it</p>
+			    </section>
+						
+							
+			<section>
+			<h2>Calculate the tSNR</h2>
+			<pre><code contenteditable>
+>>> mean = np.mean(data, -1)
+>>> std = np.std(data, -1)
+>>> tsnr = mean/std
+			</code></pre>
+			</section>
+			
+							
 <section>
-					   <p><h2>Come back here for a hands-on tutorial Monday at 1, 2 or 3 PM </h2> </p>
-
+	<p><h2>Come back here for a hands-on tutorial <br> tomorrow at 1, 2 or 3 PM </h2> </p>
 </section>
+
+<section>	
+<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
+<p>Projects rely on this core of scientific computing to create a variety of computational tools</p>
+<p>Useful discussions held on a common mailing list<>
+</section>
+
 
 			</div>
 
