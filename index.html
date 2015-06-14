@@ -41,7 +41,7 @@
 				<section>
 					<h1>Brain Hacking 101</h1>
 					<h3>Practical scientific computing for neuroimaging</h3>
-					<p><a href="http://arokem.org">Ariel Rokem</a>, <a href="http://escience.washington.edu">University of Washington eScience Institute</a> </p>
+					<p><a href="http://arokem.org" target="_blank">Ariel Rokem</a>, <a href="http://escience.washington.edu" target="_blank">University of Washington eScience Institute</a> </p>
 					<p class="fragment"> Follow along at <t>http://tinyurl.com/brainhack101</t></p>
 				</section>
 
@@ -55,10 +55,10 @@
 				</section>
 
 				<section>
-					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
+					<h2><a href="http://nipy.org" target="_blank">Neuroimaging in Python</a></h2>
 				</section>
 				<section>
-				<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
+				<h2><a href="http://nipy.org" target="_blank">Neuroimaging in Python</a></h2>
 					<p>Why Python?</p>
 					<section>
 					</section>
@@ -78,6 +78,73 @@
 						<p class="fragment"> (Relatively) easy to learn </p>
 					</section>
 				</section>
+
+				<section>
+					<h2>Scientific Python</h2>
+					<p class="fragment"> Numpy : numerical computing </p>
+					<p class="fragment"> Scipy : basic scientific tools </p>
+					
+				</section>
+				<section>
+					<h2><a href="http://scipy.org" target="_blank">Scipy </a></h2>
+					<section>
+						Optimization
+					</section>
+					<section>
+						Image and signal processing
+					</section>
+					<section>
+						Statistics
+					</section>
+					<section>
+						etc.
+					</section>
+				</section>
+
+				<section>
+					<h2>Scientific Python</h2>
+					<p> Numpy : numerical computing </p>
+					<p> Scipy : basic scientific tools </p>
+					<p class="fragment"> Matplotlib : visualization </p>
+				</section>
+				
+				<section>
+					<h2><a href="http://matplotlib.org" target="_blank"> Matplotlib </a></h2>
+					
+					<section>
+					<img src="images/mpl1.png">
+					</section>					
+					<section>
+					<img src="images/mpl2.png">
+					</section>
+				</section>
+
+				<section>
+					<h2>Scientific Python</h2>
+					<p> Numpy : numerical computing </p>
+					<p> Scipy : basic scientific tools </p>
+					<p> Matplotlib : visualization </p>
+					<p class="fragment"> IPython : interactive computing </p>
+				</section>
+				
+				<section>
+					<h2><a href="http://ipython.org"> IPython </a></h2>
+					<section>
+						<p class="fragment">"If you're not using IPython...</p>
+						<p class="fragment">...you're doing it wrong"</p>
+							
+					</section>					
+
+					<section>
+						<div style="position: absolute; top: 100px; left:230px;">
+						The Jupyter notebook <br>
+						<img src="images/ipython1.png" width="500px;">
+					</section>
+					<section>
+						Share your analysis directly on <a href="https://github.com/arokem/ISBI2015/blob/master/RS-SFM-example.ipynb" target="_blank"> github </a>
+					</section>
+				</section>
+				
 				<section>	
 					<h2><a href="http://nipy.org">Neuroimaging in Python</a></h2>
 					<p class="fragment">A diverse set of projects:</p>
@@ -108,15 +175,12 @@ data = ni.get_data()
 					</pre></code>
 				</section>
 
-
-				<section>
 					<h2>Reading data from file</h2>
 					<pre><code contenteditable>
-import nibabel as nib
-ni = nib.load('fmri.nii.gz')
-data = ni.get_data()
-					</pre></code>
+type(data)
+			</pre></code>
 				</section>
+
 
 				<section>
 					<h2>Look at your data!</h2>
@@ -125,8 +189,9 @@ import nibabel as nib
 ni = nib.load('fmri.nii.gz')
 data = ni.get_data()
 import matplotlib.pyplot as plt
-plt.matshow(data[:, :, data.shape[-1]//2])
-plt.show()
+fig, ax = plt.subplots(1)
+ax.matshow(data[:, :, data.shape[-1]//2])
+ax.show()
 					</pre></code>
 				</section>
 
